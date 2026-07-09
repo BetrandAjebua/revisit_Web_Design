@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="start-screen" class="screen ">
+      <h1>Quiz Time!</h1>
+      <p>Test your knowledge with this fun Question</p>
+      <button>  Start Quiz</button>
+
+
+    </div>
+    <div id="question-screen" class=" screen  active">
+      <h3>What is the Capital of France?</h3>
+      <div class="status">
+        <div >Question <span class="question-number">1</span> of <span class="total-question">6</span></div>
+        <div>Score: <span class="score">0</span></div>        
+      </div>
+       <div class="options">
+          <button>London</button>
+          <button>Berlin</button>
+          <button>Paris</button>
+          <button>madrid</button>
+        </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+    <div class="screen" id="result-screen">
+<h2>Quiz Results</h2>
+<div class="remark">
+  <p class="">You  score <span>0</span> out of <span>6</span></p>
+  <h2 class="comment">Good effort! Keep learning</h2>
+</div>
+<button>Restart   Quiz</button>
+    </div>
+
+
+  </div>
+</body>
+</html>
