@@ -89,8 +89,20 @@ padding: 12px;
 }
 #question-screen >.options> button:hover{
 background-color: hsl(32deg 35% 90%);
+cursor: pointer;
 }
 
+#question-screen >.progress-bar{
+  margin:8px 0;
+  position: relative;
+  height: 8px;
+  width:inherit;
+  background-color: hsl(38.57deg 41.18% 93.33%);
+}
 
-
+#question-screen >.progress-bar>.progress{
+  height: inherit;
+  width:50%;
+  background-color: hsl(18.77deg 78.85% 55.49%)
+}
 
