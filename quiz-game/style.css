@@ -9,24 +9,23 @@ body{
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  font-family: poppins;
+  font-family: sans-serif;
 
 }
-
 .container{
   background-color: white;
   width: 100%;
-  max-width: 600px;
-  padding:25px 0;
+  max-width: 400px;
+  padding:32px 0;
   box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
 }
+
 .screen{
   display: none;
 }
-
 
 .active{
   display: block;
@@ -34,32 +33,41 @@ body{
 #start-screen{
   text-align: center;
 }
+
 #start-screen>button, #result-screen>button{
   color: white;
   border: none;
   background: rgb(233 106 50);
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  font-weight: 400;
   transition: background-color 0.4s ease;  
 }
-#start-screen>button:hover{
+
+#start-screen>button:hover, #result-screen>button:hover{
   background-color:rgb(192, 89, 44);
 }
- #start-screen>h1{
+
+ #start-screen>h1, #result-screen>h2{
   color: rgb(233 106 50);
  }
-#start-screen > p{
-margin: 10px 0;
+  #start-screen>h1, #result-screen>h2{
+  color: rgb(233 106 50);
+  font-size: 1.5rem;
+ }
+
+ #start-screen > p{
+margin: 8px 0;
 color: rgb(128 117 105);
 }
-
 #question-screen{
-padding: 12px;
+padding: 8px;
 }
 #question-screen >h3{
   display: block;
   text-align: center;
+  font-size: 1rem;
+  margin: 12px;
 }
   #question-screen> .status{
     display: flex;
@@ -67,12 +75,12 @@ padding: 12px;
     color: rgb(128 117 105);
 
 }
+
 #question-screen > .options{
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-
 #question-screen >.options> button{
 
   background-color: hsl(31.58deg 61.29% 93.92%);
@@ -82,11 +90,10 @@ padding: 12px;
   padding:6px;
   border: none;
   box-shadow: 0px 0px 2px hsl(30, 4%, 43%);
-  transition: background-color 0.3s linear;
+  transition: background-color 0.2s linear;
   border-radius: 4px;
-
-
 }
+
 #question-screen >.options> button:hover{
 background-color: hsl(32deg 35% 90%);
 cursor: pointer;
@@ -99,10 +106,69 @@ cursor: pointer;
   width:inherit;
   background-color: hsl(38.57deg 41.18% 93.33%);
 }
-
-#question-screen >.progress-bar>.progress{
+ #question-screen >.progress-bar>.progress{
   height: inherit;
   width:50%;
   background-color: hsl(18.77deg 78.85% 55.49%)
 }
 
+#result-screen{
+  text-align: center;
+}
+#result-screen>.remark{
+  background-color: rgb(249 240 230);
+  width: fit-content;
+  margin: 16px auto;
+  padding: 16px 32px;
+  border-radius: 6px;
+
+}
+
+#result-screen>.remark>.comment{
+  color: hsl(18.77deg 78.85% 55.49%);
+  font-size: 1.2rem; 
+  margin: 8px 0 ;
+
+}
+
+@media(min-width:500px){
+
+  .container{
+  max-width: 500px;
+}
+
+#start-screen>button, #result-screen>button{
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+  #start-screen>h1, #result-screen>h2{
+  font-size: 2.5rem;
+ }
+
+#start-screen > p{
+margin: 10px 0;
+}
+#question-screen{
+padding: 12px;
+}
+
+
+#question-screen > .options{
+  gap: 6px;
+}
+
+#question-screen > h3{
+  font-size: 1.5rem;
+}
+
+}
+
+@media(max-width:300px){
+ #question-screen > .status{
+  display: block;
+  text-align: center;
+
+ }
+}
