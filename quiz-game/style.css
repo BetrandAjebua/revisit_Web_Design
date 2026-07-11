@@ -12,6 +12,7 @@ body{
   font-family: sans-serif;
 
 }
+
 .container{
   background-color: white;
   width: 100%;
@@ -88,7 +89,7 @@ padding: 8px;
   font-weight: 500;
   text-align: left;
   padding:6px;
-  border: none;
+  border: 1px solid hsl(31.58deg 61.29% 93.92%);
   box-shadow: 0px 0px 2px hsl(30, 4%, 43%);
   transition: background-color 0.2s linear;
   border-radius: 4px;
@@ -108,7 +109,7 @@ cursor: pointer;
 }
  #question-screen >.progress-bar>.progress{
   height: inherit;
-  width:50%;
+  /* width:50%; */
   background-color: hsl(18.77deg 78.85% 55.49%)
 }
 
@@ -169,6 +170,16 @@ padding: 12px;
  #question-screen > .status{
   display: block;
   text-align: center;
-
  }
+}
+
+/* Togable Classes */
+#question-screen > .options>.correct{
+  /* background-color: hsl(120, 82%, 78%); */
+  border: 2px solid rgb(144, 215, 144);
+}
+#question-screen > .options>.wrong{
+  /* background-color: hwb(0 3% 29%); */
+  border: 1px solid rgb(253, 76, 76);
+
 }
