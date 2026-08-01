@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+.container {
+  text-align: center;
+  background-color: white;
+
+  justify-self: center;
+  width: 86vw;
+  min-width: 300px;
+  padding: 20px;
+}
+h1 {
+  font-size: 1.5rem;
+  padding: 8px;
+}
+.transactionn-summary> h3{
+  text-align: center;
+}
+
+  body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2e8b57, #a8d5ba);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container > .transactionn-summary {
+    padding-top: 12px;
+  background: linear-gradient(135deg, #2e8b57, #608e23);
+  margin: 16px;
+  border-radius: 10px;
+}
+
+#main-balance {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.sum-expenditures {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 14px;
+}
+
+.sum-expenditures #income,
+#expenses {
+  background-color: white;
+  margin: 8px;
+  padding: 6px;
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.sum-expenditures #income:hover,
+#expenses:hover {
+  transform: translateY(-5px);
+}
+
+.sum-expenditures #income {
+  color: #2e8b57;
+}
+
+.sum-expenditures #expenses {
+  color: rgb(209, 12, 12);
+}
+
+.expenditure > p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+  min-height: 40vh;
+}
+
+.main-container > .add-transaction {
+  order: 1;
+  background-color: rgb(230, 234, 236);
+  width:100%;
+}
+
+ul > li {
+  display: flex;
+  list-style: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-weight: 600;
+  color: #2d3436;
+  justify-content: space-between;
+  transition: all 0.2s linear;
+}
+
+ul > li:hover {
+  transform: translateX(5px);
+
+}
+
+.transactions {
+  order: 2;
+  margin: 8px;
+  max-height: 60vh;
+  overflow-y: scroll;
+  overflow-x:hidden;
+
+  padding-right: 4px;
+}
+
+form input, select, button, label{
+  width: 90%;
+  border: #2d3436;
+  padding: 6px;
+  margin: 8px;
+  display: block;   transition: all .2s linear;
+margin: auto ;
+}
+
+form button{
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  background-color: #2e8b57;
+  color: white;
+  font-weight: 400;
+  border-radius: 10px;
+
+
+}
+
+button:hover, input:focus{
+  transform: scale(1.01);
+  cursor: pointer;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.del-icon{
+ cursor: pointer;
+  color: #2d3436;
+    margin-left: 12px;
+  transition: all 0.3s ease-in-out;
+
+}
+.del-icon:hover{
+      color: red;
+}
+li:hover .del-icon {
+ visibility: visible;
+
+}
+
+@media screen and ( min-width:700px){
+
+.container {
+  width: 60vw;
+}
+
+h1 {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+#main-balance {
+  font-size: 2rem;
+}
+
+.sum-expenditures {
+  padding: 20px 20px;
+}
+
+.expenditure > p {
+  font-size: 1.6rem;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-container > h2 {
+  text-align: left;
+}
+.main-container > .add-transaction {
+  background-color: rgb(230, 234, 236);
+  text-align: left;
+  width: 50%;
+
+}
+
+.transactions {
+  order: 1;
+  width: 50%;
+  margin: 8px;
+  padding-right: 4px;
+}
+
+h3 {
+  /* position: sticky; */
+  color: #2d3436;
+  font-size: medium;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.del-icon{
+    visibility: hidden;
+
+
+}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <div class="transactionn-summary">
+      <h3>Your Balance</h3>
+      <p id="main-balance">$1000</p>
+      <div class="sum-expenditures">
+        <div class="expenditure" id="income">
+          Income <p id="income-value">$0</p>
+        </div>
+
+        <div class="expenditure" id="expenses">
+          Expenses <p id="expenses-value">$0</p>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="transactions">
+        <h3>Transactions</h3>
+        <ul class="transaction-list">
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="add-transaction">
+        <h3>Add Transaction</h3>
+        <form action="">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" placeholder="Enter Description" id="description" name="description" required>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" placeholder="Enter amount" id="amount" name="amount" required>
+          </div>
+
+          <div class="form-group">
+            <label for="Option">Category</label>
+            <select name="category" id="category">
+              <option value="exp100">Expenses</option>
+              <option value="inc100">Income</option>
+            </select>
+
+            <button type="submit" id="submit">Add Transaction</button>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
