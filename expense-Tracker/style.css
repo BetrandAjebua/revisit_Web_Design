@@ -84,7 +84,7 @@ h1 {
 }
 
 .main-container > .add-transaction {
-  order: 1;
+  padding-top: 8px;
   background-color: rgb(230, 234, 236);
   width:100%;
 }
@@ -98,6 +98,7 @@ ul > li {
   color: #2d3436;
   justify-content: space-between;
   transition: all 0.2s linear;
+   animation: slideIn 0.8s ease;
 }
 
 ul > li:hover {
@@ -106,13 +107,13 @@ ul > li:hover {
 }
 
 .transactions {
-  order: 2;
   margin: 8px;
   max-height: 60vh;
   overflow-y: scroll;
   overflow-x:hidden;
-
   padding-right: 4px;
+ 
+
 }
 
 form input, select, button, label{
@@ -120,8 +121,9 @@ form input, select, button, label{
   border: #2d3436;
   padding: 6px;
   margin: 8px;
-  display: block;   transition: all .2s linear;
-margin: auto ;
+  display: block;   
+  transition: all .2s linear;
+  margin: auto ;
 }
 
 form button{
@@ -146,14 +148,30 @@ button:hover, input:focus{
   color: #2d3436;
     margin-left: 12px;
   transition: all 0.3s ease-in-out;
+      padding: 2px 4px;
+
 
 }
 .del-icon:hover{
       color: red;
+      background-color: #fee2e2;
 }
 li:hover .del-icon {
  visibility: visible;
 
+}
+
+
+@keyframes slideIn{
+  from{
+opacity: 0;
+transform: translateX(-20px);
+  }
+
+  to{
+opacity: 1;
+transform: translateX(0px);
+  }
 }
 
 @media screen and ( min-width:700px){
@@ -194,7 +212,6 @@ h1 {
 }
 
 .transactions {
-  order: 1;
   width: 50%;
   margin: 8px;
   padding-right: 4px;
@@ -216,3 +233,4 @@ h3 {
 
 }
 }
+
