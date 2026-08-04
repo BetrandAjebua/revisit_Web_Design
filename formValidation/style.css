@@ -91,3 +91,35 @@ input:focus{
   background-color: white;
   text-align: center;
 }
+
+#notification{
+  display: none;
+width: 100vw;
+height: 100vh;
+position: absolute;
+}
+#notification h3{
+ padding: 100px;
+ margin-top: 20%;
+opacity: 1;
+  padding: 24px 24px;
+  background-color: #fff;
+  justify-self: center;
+  text-align: center;
+  color: #2ecc71;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+animation: slidIn 0.8s linear;
+  
+}
+ 
+@keyframes slidIn{
+  from{
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
