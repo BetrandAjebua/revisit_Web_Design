@@ -1,0 +1,288 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #4ade80;
+  --primary-dark: #22c55e;
+  --primary-light: #86efac;
+  --bg-dark: #1a1a1a;
+  --text-light: #f3f4f6;
+  --text-gray: #9ca3af;
+  --card-bg: #252525;
+  --card-hover: #2e2e2e;
+  --border-radius: 12px;
+  --shadow-sm: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-md: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  padding: 20px 10px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin-top: 16px;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+header p {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+/* Container & Cards */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 16px;
+  border-radius: var(--border-radius);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  text-align: center;
+}
+
+.card-header h2 {
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+}
+
+.icon-container {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 8px auto;
+  border-radius: 50%;
+  background-color: var(--card-hover);
+  color: var(--primary-dark);
+  text-align: center;
+  line-height: 30px;
+}
+
+.card-header .currency,
+.card-header .amount {
+  color: var(--primary-dark);
+}
+
+.card-header .amount {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-header .currency {
+  font-size: 1.2rem;
+}
+
+.card-header .description,
+.card-header .period {
+  color: var(--text-gray);
+}
+
+.card .description {
+  font-size: 0.75rem;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card button {
+  font-weight: bold;
+  background-color: rgb(65, 65, 65);
+  color: var(--text-light);
+  border: none;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  margin-top: 16px;
+}
+
+.pro-card button {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  background-color: var(--card-hover);
+}
+
+.card button:hover {
+  transform: scale(1.02);
+}
+
+.card button:active {
+  transform: scale(0.98);
+}
+
+.card-body {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  flex-grow: 1;
+}
+
+.card-body li {
+  margin: 10px 0;
+  list-style: none;
+}
+
+.card-body .fa-check {
+  color: var(--primary-dark);
+}
+
+.card-body .fa-times {
+  color: rgb(255, 64, 64);
+}
+
+.card-body li:has(.fa-times) {
+  color: var(--text-gray);
+}
+
+/* Testimonial Section */
+.testimonial {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--card-hover);
+  margin: 30px auto;
+  font-size: 0.85rem;
+  padding: 16px;
+  border-radius: var(--border-radius);
+  color: var(--text-gray);
+}
+
+.testimonial .fa-quote-left,
+.testimonial .fa-quote-right {
+  color: var(--primary-dark);
+}
+
+.testimonial .img-testimonial {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: url('https://www.the-sun.com/wp-content/uploads/sites/6/2023/02/fears-eerily-realistic-ai-generated-796012882.jpg') no-repeat center center/cover;
+  flex-shrink: 0;
+}
+
+.img-testi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.container .pro-card{
+  position:relative;
+  transform: scaleY(1.05);
+  border: 2px solid var(--primary-dark);
+  transform-origin: bottom;
+  border-bottom: none;
+}
+
+.pro-card .badge {
+  position: absolute;
+  top: 14px;
+  left: 80%;
+  transform: translateX(-50%);
+  background-color: var(--primary-light);
+  color: VAR(--bg-dark);
+  padding: 4px 6px;
+  border-radius: var(--border-radius);
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+/* ==========================================
+   MEDIA QUERIES FOR RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablet Viewports (≤ 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 calc(45% - 16px);
+    min-width: 280px;
+  }
+
+  .testimonial {
+    width: 90%;
+  }
+}
+
+.testimonial .job-title{
+  color: var(--primary-dark);
+}
+
+/* Mobile Viewports (≤ 720px) */
+@media (max-width: 720px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .testimonial {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Small Mobile Viewports (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px 8px;
+  }
+
+  .card-header .amount {
+    font-size: 1.6rem;
+  }
+
+  .img-testi {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
