@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>food finder app</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="head-container" id="recipes">
+      <h1>
+        <i class="fa-solid fa-utensils"></i>
+        <span>Recipe Finder</span>
+      </h1>
+      <p class="head-description">
+        Find Delicious recipes from around the world
+      </p>
+      <p>
+        Data from <span class="db-name"> <i class="fas fa-user-chef"></i>foodDB</span>
+      </p>
+    </div>
+    <div class="search-container">
+      <form action="">
+        <input type="text" placeholder="Search for meal or keywords..." id="word-search">
+        <button type="submit">Search</button>
+      </form>
+      <div class="search-header">
+        <p>Search results for "<span class="word-search"></span>": </p>
+
+      </div>
+      <div class="search-items">
+      </div>
+
+
+    </div>
+    <div class="detail-container">
+      <div class="detail-head">
+        <a href="#recipes"> <i class="fas fa-arrow-left"></i> Back to recipes</a>
+        <div class="selected-img" style="background-image:url(https://www.willflyforfood.net/wp-content/uploads/2022/11/pakistani-food-biryani.jpg)">
+         
+        </div>
+        <h3>Food Name Here</h3>
+        <p>Recipe name here</p>
+
+      </div>
+      <div class="instruction">
+        <h3>Instructions</h3>
+        <p class="instruction-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium placeat culpa impedit debitis voluptate numquam praesentium ullam tempora repellendus accusamus.
+        </p>
+      </div>
+      <div class="ingredient">
+        <h3>Ingredient</h3>
+        <ul>
+          <!-- <li><i class="fas fa-check"></i>List Here</li> -->
+    
+        </ul>
+
+      </div>
+
+      <div class="video-frame">
+        
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./script.js" type="module"></script>
+</body>
+
+</html>

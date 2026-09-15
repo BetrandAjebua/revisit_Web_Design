@@ -1,0 +1,226 @@
+:root{
+  --primary-color:#a78bfa;
+  --primary-dark:#6c37e8;
+  --primary-light:#c4b5fd;
+  --primary-gradient:linear-gradient(135deg, #a78bfa, #8b5cf6);
+  --bg-dark:#1a1a1a;
+  --text-light: #9ca3af;
+  --text-gray:#9ca3af;
+  --card-bg:#252525;
+  --card-hover:#2e2e2e;
+  --border-radius:12PX;
+  --shadow-sm:0 4px 6px rgba(0,0,0,0.1);
+  --shadow-md:0 10px 15px rgba(0,0,0,0.1);
+  --shadow-sm:0 20px 25px rgba(0,0,0,0.1);
+  --border-light:rgba(255, 255, 255, 0.05);
+  --bg-overlay:rgba(255, 255, 255, 0.1 );
+  --text-dark:#000;
+  --shadow-color-primary:rgba(139, 92, 246, 0.3);
+  --shadow-color-primry-hover:rgba(139, 92, 246, 0.4);
+} 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+}
+
+
+.container h1{
+  position: relative;
+text-align: center;
+color: var(--primary-dark);
+font-size: 1.8rem;
+margin-bottom: 1rem;
+}
+.container h1::before{
+  content: "";
+  position: absolute;
+  background-color: var(--primary-dark);
+  width: 5%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--primary-dark);
+
+}
+
+.container .header-description{
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 16px;
+}
+.container > .card-container{
+display: flex;
+flex-wrap:wrap ;
+gap: 15px;
+justify-content: center;
+}
+.container > .card-container .card{
+  width: 80%;
+  background-color: var(--card-bg);
+  min-height: 60vh;
+  /* padding: 10px; */
+  height: 160px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  margin-top: 15px;
+  box-shadow: var(--shadow-color-primary);
+  transition: all 0.2s linear;
+}
+
+.container > .card-container .card:hover{
+  transform: translateY(-5px);
+  background-color: var(--card-hover);
+}
+
+.card .card-head{
+  background-color: var(--primary-dark);
+  margin: 0;
+  height: 30%;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  position: relative;
+}
+
+.card-head .card-profile{
+position:absolute;
+height: 80px;
+width: 80px;
+top: 36%;
+left: 50%;
+transform: translate(-50%, 30%);
+border-radius: 60px;
+overflow: hidden;
+border: 2px solid var(--card-bg);
+}
+.card-profile img{
+  width: 80px;
+}
+.card .card-body{
+  margin-top: 40px;
+  text-align: center;
+  height: 8%;
+}
+.card-body span{
+  display: block;
+}
+.card-body .member-name{
+  color: white;
+  font-weight: bold
+}
+.card-body .member-title{
+  color:var(--primary-dark);
+  font-size: 12px
+}
+.card-footer{
+  text-align: center;
+}
+
+.card-footer p{
+  position: relative;
+  border-top: 1px solid var(--border-light);
+  width: 88%;
+  height: 100px;
+  /* overflow-y:auto; */
+  margin: 40px auto 15px auto; 
+  padding: 0px 10px;
+  padding-top: 16px;
+
+  color: var(--text-gray);
+}
+
+.card-footer i{
+  width: 88%;
+
+align-self: center;
+color: white;
+border-radius: 10px;
+width: 20px;
+height: 20px;
+padding: 5px;
+background-color: var(--card-hover);
+margin: 10px 5px;
+margin-top: auto;
+margin-bottom: 20px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+transition: all 0.5s ease;
+
+}
+
+.card-footer i:hover{
+cursor: pointer;
+color: #6628f6;
+}
+
+.footer{
+  margin: 10px auto;
+  text-align: center;
+  margin-top: 20px;
+  background-color: var(--card-bg);
+  width: 75vw;
+  padding-top: 10px;
+  border-radius: var(--border-radius);
+  border-top: 2px solid var(--primary-dark);
+}
+
+.footer h2{
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+}
+.footer .footer-description{
+  font-size: 14px;
+  color: var(--text-gray);
+  margin: 15px;
+}
+
+.footer button{
+  margin: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  padding: 5px 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(180deg,  #6628f6,#725eab);
+  transition:all 0.3s linear;
+}
+.footer button:hover{
+  background: linear-gradient(135deg,  #6628f6, #6628f6);
+  box-shadow: var(--shadow-color-primry-hover);
+  transform: scale(1.05);
+  cursor: pointer;
+
+}
+.footer button:active{
+   transform: scale(1.0);
+  
+
+}
+
+@media (min-width:500px) {
+  .container > .card-container .card{
+  width: 45%;
+
+  }
+}
+
+@media (min-width:760px) {
+  .container > .card-container .card{
+  width: 25%;
+
+}
+  
+}
+
+
+

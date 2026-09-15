@@ -1,0 +1,346 @@
+:root {
+  --primary: #ff7e5f;
+  --primary-dark: #eb5e41;
+  --primary-light: #ffb199;
+  --secondary: #0ba360;
+  --text-dark: #333;
+  --text-light: #f8f9fa;
+  --background: #fff;
+  --background-light: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-radius: 8px;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background-light);  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.head-container {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.head-container h1 {
+  color: var(--primary);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.head-container h1 > i {
+  margin-right: 6px;
+}
+
+.head-container p {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.icon-img {
+  padding-top: 5px;
+  width: 18px;
+  margin-left: 6px;
+  height: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p .db-name {
+  color: var(--primary);
+}
+
+.head-container .data-origin {
+  font-size: 14px;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 60rem;
+  gap: 8px;
+}
+
+/* Constrained input width preventing expansion on small screens */
+.search-container form > input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid rgb(227, 227, 227);
+  width: 40%;
+  min-width: 240px;
+  max-width: 100%;
+  flex-grow: 0;
+}
+
+.search-container form > input:focus {
+  border: 1px solid var(--primary);
+}
+
+.search-container form > button {
+  color: white;
+  background-color: var(--primary-dark);
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s linear;
+}
+
+.search-container form > button:hover {
+  cursor: pointer;
+  transform: scaleX(1.05);
+  box-shadow: 0 6px 11px rgba(0, 0, 0, 0.3);
+}
+
+.search-container form > button:active {
+  cursor: progress;
+  transform: scale(0.8);
+}
+
+.search-container .search-header {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.search-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.search-items > div {
+  width: 100%;
+  height: 14rem;
+  background-color: white;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: slideCards 0.5s ease-in;
+}
+.search-items > div:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--primary);
+}
+
+.item-head {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 55%;
+  background-size: cover;
+  background-position: center;
+}
+
+.item-head:hover{
+  cursor: pointer;
+}
+
+.item-head:active{
+  cursor: progress;
+}
+
+.item-body {
+  margin-left: 16px;
+  margin-top: 10px;
+}
+
+.item-body button {
+  background-color: var(--primary);
+  padding: 4px 6px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 6px;
+  transition: all 0.3s ease;
+}
+
+.item-body button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.detail-container {
+  padding-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.item-body h4{
+  font-size: 14px;
+  height: 40px;
+}
+.detail-head a {
+  align-self: center;
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--primary-dark);
+  font-weight: bold;
+  padding: 4px;
+  border: 2px solid var(--primary-dark);
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.detail-head a:hover {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-dark);
+  font-weight: bold;
+  padding: 4px;
+  border: 2px solid var(--primary-dark);
+  border-radius: 8px;
+}
+
+.selected-img {
+  width: 100%;
+  max-width: 16rem;
+  height: 16rem;
+  margin: 2rem auto auto auto;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.detail-head h3 {
+  margin: 14px auto;
+  text-align: center;
+  color: var(--primary-dark);
+}
+
+.detail-head p {
+  background-color: var(--primary-dark);
+  color: white;
+  width: fit-content;
+  min-width: 6rem;
+  letter-spacing: 2px;
+  text-align: center;
+  justify-self: center;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.detail-container .instruction {
+  margin: 8px 10px;
+}
+
+.ingredient {
+  text-align: left;
+  padding-bottom: 2rem;
+  width: fit-content;
+  margin: 0px auto;
+}
+
+.ingredient ul {
+  margin-top: 10px;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+.ingredient ul i {
+  background-color: var(--secondary);
+  font-size: 12px;
+  color: white;
+  margin: 4px;
+  padding: 4px 6px 4px 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 12px;
+}
+
+.ingredient a {
+  padding: 10px ;
+
+  background-color: red;
+  border-radius: 10px;
+  color: white;  
+  text-decoration: none;
+  border: none;
+  margin: 30px auto 36px auto;
+  transition: all 0.2s ease;
+
+}
+
+.ingredient a:hover {
+  cursor: pointer;
+  box-shadow: 0px 8px 14px rgba(213, 10, 10, 0.8);
+  transform: translateY(-3px) scale(1.02);
+}
+
+a i {
+  font-size: 12px;
+  margin-right: 6px;
+  border-radius: 0px;
+}
+
+.video-frame{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@keyframes slideCards {
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100%{
+opacity: 1;
+transform: translateY(0px);
+  }
+  
+}
+
+.hide-container{
+  display: none;
+}
+
+/* Force wrapping on narrow screens without expanding input */
+@media (max-width: 480px) {
+  .search-container form {
+    flex-direction: column;
+  }
+
+  .search-container form > input {
+    width: 80%;
+    min-width: auto;
+  }
+}
