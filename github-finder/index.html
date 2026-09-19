@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Github Finder</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <h1><i class="fa-brands fa-github"></i>GitHub User Finder</h1>
+    <span>Search for any Github user to see their Profile and repositories</span>
+  </header>
+  <form action="">
+    <input id="user-name" type="text" placeholder="Enter gitHub name" />
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="container">
+    <div class="hide profile">
+      <div class="profile-img"
+        style="background-image: url()">
+      </div>
+      <div class="profile-content">
+       
+
+      </div>
+    </div>
+    <div class=" hide followers-container">
+      <div class="follower followers"><i class="fas fa-users"></i><span>followers</span></div>
+
+      <div class="follower following"><i class="fas fa-user-group"></i><span> following</span></div>
+     <div class="follower repositories"><i class="fa fa-code-branch"></i><span> repositories</span></div>
+    </div>
+
+    <div class="hide link-container">
+      <div class="links">
+        <span class="home"><i class="fas fa-building"></i> <a href="#">
+
+        </a></span>
+        <span class="web"><i class="fas fa-link"></i> <a href="#">
+
+        </a></span>
+        <span class="twitter"><i class="fa fab fa-twitter"></i> <a href="#">
+          
+        </a></span>
+
+      </div>
+      <h3>
+        Latest Repositories
+      </h3>
+    </div>
+
+    <div class="rep-container">
+   
+
+    </div>
+  </div>
+
+
+
+  <script src="./script.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+:root {
+  --primary-color: #a78bfa;
+  --primary-dark: #8b5cf6;
+  --primary-light: #c4b5fd;
+  --bg-dark: #1a1a1a;
+  --card-bg: #252525;
+  --text-light: #f3f4f6;
+  --text-gray: #9ca3af;
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --border-radius: 10px;
+  --content-width: 60vw;
+}
+
+* {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+  padding: 1rem;
+}
+
+header {
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--primary-dark);
+}
+
+header span {
+  color: var(--text-gray);
+  font-size: 12px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 40rem;
+  width: 100%;
+  gap: 5px;
+}
+
+form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: var(--card-bg);
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-dark);
+}
+
+form button {
+  background-color: var(--primary-dark);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  color: black;
+}
+
+form button:hover {
+  transform: scale(1.03);
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+form button:active {
+  transform: scale(0.9);
+  background-color: var(--primary-dark);
+}
+
+.container {
+  background-color: var(--card-bg);
+  max-width: 40rem;
+  width: 100%;
+  margin: 20px auto;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.container > .profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.profile .profile-img {
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.hide{
+  display: none;
+}
+.profile-content h3 {
+  color: white;
+}
+
+.profile-content .user-name {
+  color: var(--primary-dark);
+  font-size: 14px;
+}
+
+.profile-content .occupation {
+  font-size: 12px;
+  color: white;
+}
+
+.profile-content .other-profile {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.other-profile i {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.fa, .fas, .fa-brand {
+  color: var(--primary-dark);
+}
+
+.profile-content > a {
+  background-color: var(--primary-dark);
+  border-radius: 14px;
+  font-size: 12px;
+  padding: 5px 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+
+.followers-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.followers-container div {
+  background-color: rgb(54, 54, 54);
+  padding: 6px 12px;
+  flex: 1 1 40%;
+  margin: auto;
+  max-width: 12rem; /* prevents single box from spanning full width */
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.followers-container div > i {
+  margin-right: 8px;
+}
+
+.followers-container div > span {
+  color: white;
+}
+
+.link-container {
+  margin-top: 16px;
+  border-top: 1px solid rgb(70, 70, 70);
+  border-bottom: 1px solid rgb(70, 70, 70);
+  padding-top: 10px;
+  border-radius: 4px;
+}
+
+.links {
+  margin: 10px auto 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 12px;
+}
+
+.links a {
+  color: var(--text-gray);
+  text-decoration: none;
+  margin: 4px;
+}
+
+.link-container h3 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.rep-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.rep-container .rep {
+  position: relative;
+  background-color: rgb(54, 54, 54);
+  justify-content: flex-start;
+  flex: 1 1 48%;
+  min-height: 6rem;
+  margin-top: 2%;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 20rem; /* prevents single box from spanning full width */
+  transition: all 0.4s ease;
+}
+
+.rep-container .rep:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-color: rgb(75, 74, 74);
+
+}
+
+.rep .rep-name {
+  margin-bottom: 6px;
+}
+
+.rep .rep-name span {
+  color: white;
+  font-weight: bold;
+}
+
+.rep .description {
+  color: var(--text-gray);
+}
+
+.rep .other-details {
+  position: absolute;
+  bottom: 10px;
+  color: var(--text-gray);
+  font-size: 10px;
+}
+
+.rep .other-details > span {
+  margin-right: 8px;
+}
+
+.rep .other-details > span > i {
+  margin-right: 4px;
+}
+.profile-content a:hover{
+  cursor: pointer;
+  background-color: var(--primary-color);
+  transform: scale(1.03);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 600px) {
+  form {
+    flex-wrap: nowrap;
+  }
+  .rep-container .rep {
+    flex: 1 1 auto;
+    max-width: 90%;
+  }
+  .followers-container div {
+    flex: 1 1 auto;
+    max-width: 90%;
+  }
+
+    .rep-container {
+    justify-content: center;
+  }
+  .rep-container .rep {
+    flex: 1 1 100%;   /* single box spans full width */
+    max-width: 100%;
+  }
+
+  header {
+text-align: center;
+
+
+}
+.profile{
+  text-align: center;
+  justify-content: center;
+}
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 2rem;
+  }
+  .container {
+    width: 60vw;
+  }
+}
+
